@@ -1,0 +1,23 @@
+.card-view {
+
+}
+
+.card-view__img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 155px;
+    object-position: center;
+    margin-bottom: 10px;
+}
+
+.card-view__heading {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.card-view__description {
+    font-size: 15px;
+    color: #C69F9E;
+    margin-bottom: 5px;
+}
