@@ -1,0 +1,7 @@
+.homePage {
+    margin: 32px 0 120px;
+
+    @include vp-768 {
+        margin: 0;
+    }
+}

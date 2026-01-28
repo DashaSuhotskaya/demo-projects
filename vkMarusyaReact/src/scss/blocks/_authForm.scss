@@ -1,0 +1,139 @@
+.authForm {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    background-color: $color-white;
+    z-index: 1000;
+    width: 420px;
+    padding: 64px 40px;
+    border-radius: 24px;
+    position: relative;
+
+    @include vp-768 {
+      padding: 64px 20px 32px;
+      width: 335px;
+    }
+  }
+
+  &__title {
+    color: $color-black;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+
+
+  &__icon {
+    &-logo {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 40px;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+    }
+
+    &-field {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-black-alpha-40;
+      
+      &--error {
+        color: $color-LightCoral;
+      }
+    }
+  }
+
+  &__field {
+    width: 100%;
+    padding: 16px 16px 16px 52px;
+    margin: 0 0 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--error {
+      border-color: $color-LightCoral;
+    }
+  }
+
+  &__btn {
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    background-color: $color-white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--close {
+      position: absolute;
+      right: -72px;
+      top: 0;
+      display: flex;
+      align-items: center;
+
+      @include vp-768 {
+        top: 8px;
+        right: 8px;
+      }
+    }
+
+    &--login {
+      background-color: $color-sky-blue;
+      color: $color-white;
+      border-radius: 28px;
+      padding: 16px;
+      text-align: center;
+      width: 100%;
+      margin: 0 0 24px;
+
+      &--success {
+        margin: 0;
+      }
+    }
+
+    &--last {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      font-weight: 700;
+      font-size: 18px;
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  &__fields {
+    margin: 0 0 12px;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__text-info {
+    color: $color-black;
+    margin: 0 0 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+}

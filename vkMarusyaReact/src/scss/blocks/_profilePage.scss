@@ -1,0 +1,168 @@
+.profilePage {
+  margin: 64px 0 0;
+
+  @include vp-768 {
+    margin: 16px 0 0;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    margin: 0 0 64px;
+
+    @include vp-375 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0 0 40px;
+    }
+  }
+
+  &__wrapper-btn {
+    display: flex;
+    gap: 64px;
+    margin: 0 0 76px;
+
+    @include vp-768 {
+      gap: 24px;
+      margin: 0 0 40px;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 0;
+    position: relative;
+
+    &-text {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+
+      @include vp-768 {
+        font-size: 0;
+
+        &::before {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &--favorite {
+      @include vp-768 {
+        .profilePage__btn-text::before {
+          content: "Избранное";
+        }
+      }
+    }
+
+    &--user {
+      @include vp-768 {
+        .profilePage__btn-text::before {
+          content: "Настройки";
+        }
+      }
+    }
+
+    &.active {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-magenta-medium;
+      }
+    }
+  }
+
+  &__icon {
+    fill-opacity: 0;
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 40px;
+
+
+    @include vp-768 {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 90px 40px;
+      margin: -90px -40px; 
+      scroll-padding-left: 40px;
+
+      gap: 40px;
+      scrollbar-width: none;
+      &::-webkit-scrollbar { display: none; }
+    }
+  }
+
+  &__item {
+    width: 224px;
+    height: 336px;
+    position: relative;
+    overflow: visible;
+    flex: 0 0 auto;
+
+    &:hover {
+      .profilePage__close-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include vp-768 {
+      .profilePage__close-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__card {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 0px 80px 0px #ffffff54;
+  }
+
+  &__close-btn {
+    position: absolute;
+    cursor: pointer;
+    top: -20px;
+    right: -20px;
+    border-radius: 30px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &__empty-message {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

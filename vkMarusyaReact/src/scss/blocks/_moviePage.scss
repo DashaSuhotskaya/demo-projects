@@ -1,0 +1,86 @@
+.moviePage {
+  margin: 32px 0 120px;
+
+  @include vp-768 {
+    margin: 0 0 32px;
+  }
+
+  &__title {
+    padding: 32px 0 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 64px;
+
+    @include vp-768 {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 40px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 0 24px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include vp-768 {
+        flex-direction: column;
+        justify-content: start;
+        margin: 0 0 12px;
+    }
+  }
+
+  &__left,
+  &__right {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__left {
+    background-color: #434346;
+    z-index: 1;
+    
+    @include vp-768 {
+        color: $color-white-50;
+        margin: 0 0 4px;
+        background-color: transparent;
+        font-size: 14px;
+        line-height: 20px;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    left: 328px;
+
+    @include vp-768 {
+        position: relative;
+        color: $color-white;
+        left: 0;
+    }
+  }
+
+  &__row::after {
+    content: "................................................................................................................................................................................................................................................................";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 320px;
+    transform: translateY(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+    color: $color-white-50;
+
+    @include vp-768 {
+        display: none;
+    }
+  }
+}
