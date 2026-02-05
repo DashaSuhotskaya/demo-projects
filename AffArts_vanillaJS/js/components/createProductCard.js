@@ -1,11 +1,12 @@
 export default function createProductCard(product) {
-    const catalogItem = document.createElement("li");
-    catalogItem.className = "catalog__item";
+  const catalogItem = document.createElement("li");
+  catalogItem.className = "catalog__item";
+  const imagePath = product.image.replace("../", "");
 
-    catalogItem.innerHTML = `
+  catalogItem.innerHTML = `
               <div class="product-card">
                 <div class="product-card__visual">
-                  <img class="product-card__img" src="${product.image}" height="436" width="290"
+                  <img class="product-card__img" src="${imagePath}" height="436" width="290"
                        alt="Изображение товара">
                   <div class="product-card__more">
                     <a href="#" class="product-card__link btn btn--icon" data-id="${product.id}">
@@ -54,10 +55,10 @@ export default function createProductCard(product) {
               </div>
         `;
 
-        const tooltipBtn = catalogItem.querySelector('.tooltip__btn');
+  const tooltipBtn = catalogItem.querySelector(".tooltip__btn");
 
-        tippy(tooltipBtn, {
-          content: `
+  tippy(tooltipBtn, {
+    content: `
             <span class="tooltip__text">Наличие товара по городам:</span>
             <ul class="tooltip__list">
               <li class="tooltip__item">Москва: ${product.availability.moscow}</li>
@@ -65,8 +66,8 @@ export default function createProductCard(product) {
               <li class="tooltip__item">Санкт-Петербург: ${product.availability.saintPetersburg}</li>
             </ul>
           `,
-          allowHTML: true,
-        });
-        
-    return catalogItem;
-  }
+    allowHTML: true,
+  });
+
+  return catalogItem;
+}
