@@ -1,0 +1,67 @@
+.header {
+    padding: 17px 10px 17px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 45px;
+    }
+
+    &__icon {
+        &-logo {
+            width: 85px;
+            height: 30px;
+        }
+
+        &-favorites {
+            width: 22px;
+            height: 22px;
+            color: $color-neutral-grey; 
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            &:hover {
+                transform: scale(1.15);
+                opacity: 0.7;
+            }
+        
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+
+        &-basket {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            &:hover {
+                transform: scale(1.15);
+                opacity: 0.7;
+            }
+        
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    &__basket, &__favorites {
+        position: relative;
+    }
+
+    &__favorites-count, &__basket-count {
+        position: absolute;
+        top: -7px;
+        right: -10px;
+        background-color: $color-apricot;
+        border-radius: 50%;
+        width: 18px;
+        text-align: center;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 15px;
+    }
+}

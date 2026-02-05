@@ -1,0 +1,82 @@
+.topMovies {
+  @include vp-375 {
+    padding: 32px 0 0;
+    margin: 0 0 32px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 64px;
+
+    @include vp-375 {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0 0 40px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 40px;
+
+    @include vp-768 {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      gap: 40px;
+      padding-top: 12px;
+      padding-left: 12px;
+      margin-top: -12px;
+      margin-left: -12px;
+    }
+  }
+
+  &__poster {
+    width: 224px;
+    height: 336px;
+    border-radius: 16px;
+
+    &--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-montana;
+      color: $color-white;
+      font-size: 16px;
+    }
+
+    @include vp-1024 {
+      width: 186px;
+    }
+    @include vp-768 {
+      width: 224px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  &__rank {
+    position: absolute;
+    padding: 8px 24px;
+    border-radius: 50px;
+    background-color: $color-white;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-amethyst;
+    top: -12px;
+    left: -12px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

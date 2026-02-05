@@ -1,0 +1,81 @@
+.userProfile {
+    &__wrapper {
+        display: flex;
+        gap: 16px;
+        margin: 0 0 40px;
+
+        &-icon {
+            width: 60px;
+            height: 60px;
+            background-color: $color-white-50;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include vp-768 {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        &--last {
+            margin: 0 0 64px;
+            @include vp-768 {
+                margin: 0 0 40px;
+            }
+        }
+    }
+
+    &__initials {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    &__settings-info {
+        display: flex;
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    &__small-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+
+        @include vp-768 {
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-white-50;
+        }
+    }
+
+    &__big-text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+
+        @include vp-768 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    &__btn {
+        background-color: $color-sky-blue;
+        padding: 16px 48px;
+        margin: 0;
+        border: none;
+        border-radius: 28px;
+        color: $color-white;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        cursor: pointer;
+
+        @include vp-375 {
+            width: 100%;
+        }
+    }
+}

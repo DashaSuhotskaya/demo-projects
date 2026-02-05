@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $ff-main;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: $color-dark-vulcan;
+  background: $color-platinum;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}

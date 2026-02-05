@@ -1,0 +1,91 @@
+.footer {
+  &__wrapper {
+    background-color: $color-white;
+    border-radius: 30px 30px 0 0;
+    padding: 29px 27px 33px 29px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px 0px #0000001A;
+
+  }
+
+  &__icon-logo {
+    width: 85px;
+  }
+
+  &__menu-left {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 17px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-neutral-grey;
+    }
+  }
+
+  &__menu-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__languages {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-neutral-grey;
+    }
+
+    &.is-active {
+      color: $color-apricot;
+      font-weight: 700;
+    }
+  }
+
+  &__icon-language {
+    width: 20px;
+    color: $color-near-black;
+  }
+
+  &__social {
+    display: flex;
+    gap: 18px;
+
+    &-link {
+      display: flex;
+      align-items: flex-start;
+      height: 31px;
+      transition: opacity 0.2s ease;
+      width: 31px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__icon-vk {
+    margin-top: 5px;
+  }
+}
